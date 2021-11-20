@@ -5,6 +5,9 @@ fn main() {
     let unique_values = compute_unique_values(&data);
     let mace = MACE::new("tests/example.csv");
 
+    e = e_step(mace)
+    m = m_step(e)
+    
     println!("{:?}", data);
     println!("{:?}", unique_values);
     println!("{:?}", mace);

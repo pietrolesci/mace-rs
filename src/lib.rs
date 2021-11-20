@@ -3,6 +3,47 @@ use std::fs::read_to_string;
 
 const MISSING_VALUE: &str = "";
 
+
+trait EM {
+    fn new()
+    fn e_step();
+    fn m_step();
+    fn fit(&self) {
+        self.e_step();
+        self.m_step();
+    }
+}
+
+struct BayesMACE {
+} 
+
+impl EM for BayesMACE {
+    fn e_step() {
+        //bayes e-step
+    }
+    fn m_step() {
+
+    }
+}
+
+struct VarMACE {
+
+}
+
+impl EM for VarMACE {
+    fn e_step() {
+        //variational e-step
+    }
+    fn m_step() {
+
+    }
+}
+
+fn main() {
+    println!("Hello, world!");
+}
+
+
 #[derive(Debug)]
 pub struct MACE {
     data: Vec<Vec<String>>,
@@ -24,6 +65,25 @@ impl MACE {
             num_labels,
             num_instances,
         }
+    }
+}
+
+impl MACE {
+    fn e_step() {
+
+    }
+
+    fn m_step() {
+
+    } 
+
+    fn fit(check_end) {
+        e_step()
+        m_step()
+    }
+    
+    fn fit_tol(tol) {
+        check_end()
     }
 }
 
